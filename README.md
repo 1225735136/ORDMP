@@ -29,6 +29,7 @@ For Cityscapes dataset, we use the instruction:
 python generate_cityscapes_pseudo_labels.py --data_dir /home/jsw/datasets/cityscapes/cs_raw_sequence
 ```
 </pre>
+The bottom car logo of images in cityscapes will be cropped and remain the 3/4 height which transformed from 1024*2048 to 768*2048, then resize to the 518*518, and then input to the depthanything model, produce the pseudo depth, then resized to 384*1024. 
 Different from the Nimble, we use the depth_anything_metric_depth_outdoor.pt , which you can download from the [depth_anything_metric](https://huggingface.co/spaces/LiheYoung/Depth-Anything/tree/main/checkpoints_metric_depth).
 ## **Train On Kitti**
 <pre>
