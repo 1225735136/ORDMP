@@ -29,7 +29,7 @@ For Cityscapes dataset, we use the instruction:
 python generate_cityscapes_pseudo_labels.py --data_dir /home/jsw/datasets/cityscapes/cs_raw_sequence
 ```
 </pre>
-Different from the Nimble, we use the depth_anything_metric_depth_outdoor.pt, which you can download from the depthanything.
+Different from the Nimble, we use the depth_anything_metric_depth_outdoor.pt , which you can download from the [depth_anything_metric_depth_outdoor.pt](https://huggingface.co/spaces/LiheYoung/Depth-Anything/tree/main/checkpoints_metric_depth).
 ## **Train On Kitti**
 <pre>
 ```
