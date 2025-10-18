@@ -15,6 +15,21 @@ Different from SfMLearner ,we use the following instruction
 This instruction resize the image from 1024x2048 to 512x1024, and crop the bottom part contained car logo. Finally the image will be 384*1024, and the saved image will be three pictures joined together which has the size of 384x3072.
 The train images are stored at the cs_raw_sequence_format/ and the test images are stored in the leftImg8bit/test  
 When trainning on cityscapes, the original image is a long image which has three images in one picture, we get the first part as previous image,seconde part as current image, third part as future image.  
+## **Pseudo Generate**
+Following the Nimble, we use DepthAnything as our teacher and use it to generate the Pseudo.
+For kitti dataset,we use the instruction :
+<pre>
+```
+python generate_kitti_pseudo_labels.py --data_dir /home/jsw/datasets/kitti
+```
+</pre>
+For Cityscapes dataset, we use the instruction:
+<pre>
+```
+python generate_cityscapes_pseudo_labels.py --data_dir /home/jsw/datasets/cityscapes/cs_raw_sequence
+```
+</pre>
+Different from the Nimble, we use the depth_anything_metric_depth_outdoor.pt, which you can download from the depthanything.
 ## **Train On Kitti**
 <pre>
 ```
