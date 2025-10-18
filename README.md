@@ -12,7 +12,7 @@ Different from SfMLearner ,we use the following instruction
 1024 --img_height 512 --num_threads 24
 ```
 </pre>
-This instruction resize the image from 1024x2048 to 512x1024, and crop the bottom part contained car logo. Finally the image will be 384*1024, and the saved image will be three pictures joined together which has the size of 384x3072.
+This instruction resize the image from 1024x2048 to 512x1024, and crop the bottom part contained car logo. Finally the image will be 384x1024, and the saved image will be three pictures joined together which has the size of 384x3072.
 The train images are stored at the cs_raw_sequence_format/ and the test images are stored in the leftImg8bit/test  
 When trainning on cityscapes, the original image is a long image which has three images in one picture, we get the first part as previous image,seconde part as current image, third part as future image.  
 ## **Pseudo Generate**
@@ -29,7 +29,7 @@ For Cityscapes dataset, we use the instruction:
 python generate_cityscapes_pseudo_labels.py --data_dir /home/jsw/datasets/cityscapes/cs_raw_sequence
 ```
 </pre>
-The bottom car logo of images in cityscapes will be cropped and remain the 3/4 height which transformed from 1024*2048 to 768*2048, then resize to the 518*518, and then input to the depthanything model, produce the pseudo depth, then resized to 384*1024. 
+The bottom car logo of images in cityscapes will be cropped and remain the 3/4 height which transformed from 1024x2048 to 768x2048, then resize to the 518x518, and then input to the depthanything model, produce the pseudo depth, then resized to 384*1024. 
 Different from the Nimble, we use the depth_anything_metric_depth_outdoor.pt , which you can download from the [depth_anything_metric](https://huggingface.co/spaces/LiheYoung/Depth-Anything/tree/main/checkpoints_metric_depth).
 ## **Train On Kitti**
 <pre>
