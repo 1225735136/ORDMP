@@ -15,6 +15,8 @@ Different from SfMLearner ,we use the following instruction
 This instruction resize the image from 1024x2048 to 512x1024, and crop the bottom part contained car logo. Finally the image will be 384x1024, and the saved image will be three pictures joined together which has the size of 384x3072.
 The train images are stored at the cs_raw_sequence_format/ and the test images are stored in the leftImg8bit/test  
 When trainning on cityscapes, the original image is a long image which has three images in one picture, we get the first part as previous image,seconde part as current image, third part as future image.  
+cautious:
+the camera folder should be put at cs_cs_raw_sequence when using the SfMlearner to preprocess the images,and put into camera_trainvaltest folder when training.
 ## **Pseudo Generate**
 Following the Nimble, we use DepthAnything as our teacher and use it to generate the Pseudo.
 For kitti dataset,we use the instruction :
