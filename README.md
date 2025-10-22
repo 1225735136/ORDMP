@@ -36,16 +36,18 @@ Different from the Nimble, we use the depth_anything_metric_depth_outdoor.pt , w
 ## **Train On Kitti**
 <pre>
 ```
-python train.py --data_path /home/jsw/datasets/cityscapes/cs_raw_sequence_preprocessed --log_dir logs --png --freeze_teacher_epoch 5 --model_name models_many2_new10 --pytorch_random_seed 1 --batch_size 12 --mode many2 --split cityscapes_preprocessed --dataset cityscapes_preprocessed --eval_split cityscapes --height 192 --width 512  
+python train.py --data_path /home/jsw/datasets/cityscapes/cs_raw_sequence_preprocessed --log_dir logs --png --freeze_teacher_epoch 5 --model_name models_many2_new10 --pytorch_random_seed 1 --batch_size 12 --mode many2 --split cityscapes_preprocessed --dataset cityscapes_preprocessed --eval_split cityscapes --height 192 --width 512 --using_ofrmask 1  
 ```
 </pre>
+If you don't need our ofrdmask, you can set --using_ofrmask 0.
 ## **Train On Cityscapes**
 You can train the model on cityscapes or finetune the model which pretrained on the kitti dataset. In our paper, we use the first method which train the model only on the cityscapes and test on the cityscapes dataset.
 <pre>
 ```
-python train.py --data_path /home/jsw/datasets/cityscapes/cs_raw_sequence_preprocessed --log_dir logs --png --freeze_teacher_epoch 5 --model_name models_many2_new10 --pytorch_random_seed 1 --batch_size 12 --mode many2 --split cityscapes_preprocessed --dataset cityscapes_preprocessed --eval_split cityscapes --height 192 --width 512  
+python train.py --data_path /home/jsw/datasets/cityscapes/cs_raw_sequence_preprocessed --log_dir logs --png --freeze_teacher_epoch 5 --model_name models_many2_new10 --pytorch_random_seed 1 --batch_size 12 --mode many2 --split cityscapes_preprocessed --dataset cityscapes_preprocessed --eval_split cityscapes --height 192 --width 512 --using_ofrmask 1  
 ```
 </pre>
+If you don't need our ofrdmask, you can set --using_ofrmask 0.
 </pre>
 ## **Finetune On Cityscapes**
 <pre>
