@@ -49,12 +49,6 @@ python train.py --data_path /home/jsw/datasets/cityscapes/cs_raw_sequence_prepro
 </pre>
 If you don't need our ofrdmask, you can set --using_ofrmask 0.
 </pre>
-## **Finetune On Cityscapes**
-<pre>
-```
-python train.py --weights_init pretrained --load_weights_folder /home/jsw/Manydepth2-master/manydepth2/logs/models_many2_kitti/models/weights_19 --data_path /home/jsw/datasets/cityscapes/cs_raw_sequence_preprocessed --log_dir logs --png --freeze_teacher_epoch 5 --model_name models_many2_new10 --pytorch_random_seed 1 --batch_size 12 --mode many2 --split cityscapes_preprocessed --dataset cityscapes_preprocessed --eval_split cityscapes --height 192 --width 640 
-```
-</pre>
 
 
 
